@@ -76,6 +76,7 @@ body{
     color: #ffffff;
     border: none;
     letter-spacing: 2px;
+    text-transform: capitalize;
 
   }
   .search_text2{
