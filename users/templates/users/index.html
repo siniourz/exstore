@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Excellences Store</title>
+        <link rel="icon" href="final-logo.webp" id="logo">
+        <link rel="stylesheet" href="../../static/users/css/style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="final-logo.webp">
+        <link rel="icon" type="image/png" sizes="192x192" href="final-logo.webp">
+        <link rel="icon" type="image/png" sizes="512x512" href="final-logo.webp">
+        <script src="../../static/users/css/script.js"></script>
+    </head>
+    <body>
+        <div class="navigator">
+            <div class="container">
+                <div class="excellences_box">
+                    <a href="index.html" class="excellences_link"><h1 class="text" data-lang="excellences">Excellences</h1></a>
+                </div>
+                {% if user.is_authenticated %}
+                    <h4 class="search_text">Welcome {{request.user.username}}</h4>
+                    <a href="{% url 'logout' %}" class="search_text">Logout</a>
+                {% else %}
+                    <div class="search_bar_container">
+                        <img src="../../static/users/contents/content/user(3).png" alt="" class="search_logo">
+                        <span class="search_text2"><a href="{% url 'login' %}">Login / SignUp</a></span>
+                    </div>
+                {% endif %}
+                <div class="languages">
+                    <button class="tr-button">Türkçe</button>
+                    <button class="en-button">English</button>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Earings-p/Earings.html" data-lang="earrings"><img src="../../static/users/contents/content/earrings.png" alt="" class="mobile">Earrings</a></li>
+                <li><a href="braclets-p/braclets.html" data-lang="bracelet"><img src="../../static/users/contents/content/bracelet.png" alt="" class="mobile">Bracelets</a></li>
+                <li><a href="Necklace-P/Necklace.html" data-lang="necklace"><img src="../../static/users/contents/content/necklace.png" alt="" class="mobile">Necklaces</a></li>
+                <li><a href="piercings-p/piercings.html" data-lang="piercing"><img src="../../static/users/contents/content/septum.png" alt="" class="mobile">Piercings</a></li>
+                <li><a href="contact-p/contact.html" data-lang="contact"><img src="../../static/users/contents/content/phone-call.png" alt="" class="mobile">Contact</a></li>
+            </ul>
+            <div class="small-line"></div>
+        </nav>
+        <div class="background">
+            <img src="../../static/users/contents/content/IMG_2095.JPG" alt="" class="img">
+            <div class="box-text">
+                <h1 class="bigh1" data-lang="keepYourselfUnique">Keep yourself unique</h1>
+                
+                <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=excellences&sid=cE42cTA2SFVyNk1BczJZODBfLTFfIF8g"><button class="mobile-btt" data-lang="startShopping">Show all accessories</button></a>
+            </div>
+        </div>
+        <div class="second-background">
+            <div class="box1">
+                <img src="../../static/users/contents/content/IMG_1699.JPG" alt="" class="necklace">
+            </div>
+            <div class="necklace-text">
+                <h2 class="necklace-h2" data-lang="necklace">Necklace</h2>
+                <h6 class="necklace-info" data-lang="necklaceInfo">Elevate your look by nuance details</h6>
+                <a href="Necklace-P/Necklace.html"><button class="necklace-button" data-lang="exploreNecklaces">Explore Necklaces</button></a>
+            </div>
+            <div class="necklace-video">
+                <video class="necklaceVideo" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+                    <source src="../../static/users/contents/content/Necklace-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <video class="mobile-img" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+                    <source src="content/Necklace-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="third-part">
+            <img src="../../static/users/contents/content/IMG_1692.JPG" alt="" class="third-background">
+            <div class="black-cover">
+                <div class="square">
+                    <h4 class="squareh4" data-lang="aNeedForEveryone">a need for everyone</h4>
+                    <h1 class="squareh1" data-lang="uniqueDesigns">Unique Designes</h1>
+                    <h6 class="squareh6">Excellences is the embodiment of refined sophistication and exceptional quality. With every piece, you gain access to a world of exclusive style that sets you apart, reflecting your unique taste and high standards.</h6>
+                    <img src="../../static/users/contents/content/IMG_2023.JPG" alt="" class="mobile-img2">
+                </div>
+            </div>
+        </div>
+        <div class="fourth-part">
+            <div class="bg-box">
+                <img src="../../static/users/contents/content/photo_2025-01-22 16.00.41.jpeg" alt="" class="earings-img">
+            </div>
+            <div class="bg-texts-earings">
+                <h1 class="earings-h1" data-lang="eh1">Earrings</h1>
+                <h6 class="earings-h6" data-lang="eh6">the most popular earring in 2024</h6>
+                <h3 class="earings-h3" data-lang="eh3">Elegant Drop Shaped Earrings</h3>
+                <h4 class="earings-h4" data-lang="eh4">The teardrop design earings were crowned the best of 2024, becoming a must-have item with high demand. Their elegant shape and timeless appeal add a unique touch to any style. Elevate your look with this stunning piece and stand out effortlessly.</h4>
+                <a href="https://www.shopier.com/ShowProductNew/products.php?id=30691761&sid=Y2ZON0dkMVk5MjM0T2ZaODFfMF8gXyA="><button class="addtocart" data-lang="addtocart">Add to cart</button></a>
+                <a href="Earings-p/Earings.html"><button class="exploremoreearings" data-lang="moreearings">explore other earings</button></a>
+            </div>
+            <div class="otherearings-box">
+                <img src="../../static/users/contents/content/IMG_1692.JPG" alt="" class="earings-bg2">
+                <div class="earings-black-cover">
+                    <h1 class="otherh1" data-lang="otherh1">other popular earrings</h1>
+                    <div class="earings1-box">
+                        <img src="../../static/users/contents/content/photo_2025-01-22 16.00.39.jpeg" alt="" class="e1-img">
+                        <a href="https://www.shopier.com/ShowProductNew/products.php?id=32888752&sid=RGQzRm9jZUpkRFRaVGxyTzFfM18gXyA=" target="_blank"><button class="e1-button" data-lang="e12bt">View Details</button></a>
+                    </div>
+                    <div class="earing2-box">
+                        <img src="../../static/users/contents/content/photo_2025-01-22 16.00.40.jpeg" alt="" class="e2-img">
+                        <a href="https://www.shopier.com/ShowProductNew/products.php?id=32888819" target="_blank"><button class="e1-button" data-lang="e12bt">View Details</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fifth-part">
+            <div class="braclets-color">
+                <img src="../../static/users/contents/content/IMG_1739.JPG" alt="" class="braclets-img">
+            </div>
+            <div class="braclets-texts">
+                <h1 class="braclets-h1" data-lang="bracelet">Braclets</h1>
+                <h5 class="braclets-h5" data-lang="braclets-h5">Bracelets with unique designs serve as a refined expression of personal style, offering more than just an accessory. These carefully crafted pieces add depth and sophistication to any ensemble, subtly enhancing the wearer’s aesthetic. With their distinctiveness, they create a lasting impression, making a bold yet elegant statement about individuality and taste.</h5>
+                <a href="braclets-p/braclets.html"><button class="braclets-btt" data-lang="br-btt">Explore All Braclets</button></a>
+            </div>
+            <div class="p-color">
+                <img src="../../static/users/contents/content/IMG_1746.jpg" alt="" class="p-img">
+            </div>
+            <div class="p-texts">
+                <img src="../../static/users/contents/content/IMG_1746.jpg" alt="" class="mobile-p">
+                <h1 class="p-h1" data-lang="piercing">Piercings</h1>
+                <h5 class="braclets-h5-1" data-lang="braclets-h5-1">From ears to nose, these accessories create a memorable impression and showcase individuality with confidence.</h5>
+
+                <div class="p-bg">
+                    <video class="p-vid" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+                        <source src="../../static/users/contents/content/p-vid-1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <a href="piercings-p/piercings.html"><button class="p-btt" data-lang="p-btt">Explore All Piercings</button></a>
+            </div>
+        </div>
+        <div class="circle">
+            <a href="https://www.instagram.com/excellences_store/" target="_blank"><img src="content/social.png" alt="" class="circle-insta"></a>
+        </div>
+        <footer class="last-footer">
+            <div class="bx1">
+                <h2 class="h2-1" data-lang="company">Company</h2>
+                <a href="index.html" ><h5 class="h5">Excellences Store</h5></a>
+                <h5 class="h5">Address: Ankara, Turkey</h5>
+
+            </div>
+            <div class="bx2">
+                <h2 class="h2" data-lang="contactus">Contact Us At:</h2>
+                <h5 class="h5-1">Excellencesstore@gmail.com</h5>
+                <h5 class="h5">+90 501 068 27 00</h5>
+            </div>
+            <div class="bx3">
+                <h2 class="h2-2" data-lang="follow">Follow us on:</h2>
+                <div class="media">
+                    <a href="https://www.instagram.com/excellences_store/" target="_blank"><div class="m1"><img src="../../static/users/contents/content/instagram.png" alt="" class="m-insta"></div></a>
+                    <a href="#"><div class="m2"><img src="../../static/users/contents/content/youtube.png" alt="" class="m-insta"></div></a>
+                    <a href="#"><div class="m3"><img src="../../static/users/contents/content/twitter(1).png" alt="" class="m-insta"></div></a>
+                </div>
+
+                
+            </div>
+            <div class="bx4">
+                <h2 class="h2-2" data-lang="payment">Payment Methods:</h2>
+                <div class="box-cards">
+                    <img src="../../static/users/contents/content/card.png" alt="" class="master">
+                    <img src="../../static/users/contents/content/money.png" alt="" class="master">
+                    <img src="../../static/users/contents/content/apple-pay.png" alt="" class="master">
+                    <img src="../../static/users/contents/content/google-pay.png" alt="" class="master-2">
+                    <img src="../../static/users/contents/content/visa.png" alt="" class="master-2">
+                </div>
+            </div>
+            <h4 class="footer-h4">Powered by <a href="shopier.com" class="shopier">Shopier</a></h4>
+        
+        </footer>
+       
+
+        
+    </body>
+</html>
