@@ -24,7 +24,9 @@ def login_view(request):
             return render( request,"users/login.html",{
                 "message":"invalid credentials"
             })
-    return render(request,"users/login.html")
+    return render(request,"users/login.html",{
+        "message":"login with your credentials"
+    })
 
 
 def logout_view(request):
@@ -54,4 +56,6 @@ def signup_view(request):
         login(request, user)
         return HttpResponseRedirect(reverse("index"))
     else:
-        return render(request, "users/signup.html")
+        return render(request, "users/signup.html",{
+            "message":"create with your credentials"
+        })
