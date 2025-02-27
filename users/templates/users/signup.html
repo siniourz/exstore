@@ -2,16 +2,16 @@
 {% load static %}
 
 {% block body %}
-
+<div class="loginbody">
 {% if message %}
     <div class="message">{{ message }}</div>
 {% endif %}    
 
 <form action="{% url 'signup' %}" method="post">
     {% csrf_token %}
-    <input type="text" name="username" placeholder="username" class="username" required>
+    <input type="text" autofocus name="username" placeholder="Username" class="username" required>
     <input type="email" name="email" placeholder="Email" class="email" required>
-    <input type="password" name="password" placeholder="pasword" class="password" required>
+    <input type="password" name="password" placeholder="Pasword" class="password" required>
     <input type="password" name="confirmation" placeholder="Confirm password" class="password" required>
     <input type="submit" value="sign up" class="signup2">
 
@@ -19,14 +19,10 @@
 </form>
 
 <p class="p2">aldready have an account? <a href="{% url 'login' %}">Login in here</a></p>
-<div class="color">
-    <video class="image" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
-        <source src="{% static 'users/contents/video.mp4' %}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 </div>
-
-
+<div class="color">
+    <img src="{% static 'users/contents/photo_2025-02-27 15.59.38.jpeg' %}" alt="" class="image">
+</div>
 
 
 

@@ -1,0 +1,83 @@
+<title data-lang="title">Excellences Store | Braclets</title>
+<link rel="stylesheet" href="../../static/users/css/braclets.css">
+<script src="../../static/users/css/braclets.js"></script>
+{% extends "users/layout2.html" %}
+{% load static %}
+{% block body %}
+    <body>
+        <div class="first-part">
+            <video class="bracletsVideo" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+                <source src="../../static/users/b-contents/ScreenRecording_01-29-2025 15-29-58_1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-cover">
+                <h1 class="Braclets" data-lang="bbr">Braclets</h1>
+            </div>
+        </div>
+        <div class="second-part">
+            <div class="box-left">
+                <img src="../../static/users/b-contents/IMG_1838.JPG" alt="" class="b-img">
+            </div>
+            <div class="right-box">
+                <h1 class="Braclets-h1" data-lang="bbr">Braclets</h1>
+                <h3 class="bracletsfemale" data-lang="bbf">For Females</h3>
+                <h6 class="braclets-info" data-lang="bbrinfo">Bracelets have the ability to transform an outfit, adding a layer of refinement and personal touch. These subtle details can elevate one's style, offering a unique expression of individuality and taste. The right design can bring an effortless sense of elegance and sophistication to any look.</h6>
+                <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=excellences&sid=Mlc0eHh4dlVMSkVScDFqVzBfLTFfQmlsZWtsaWtfIA==#Bileklik"><button class="braclets-btt" data-lang="brbtt">Show all braclets</button></a>
+            </div>
+
+        </div>
+        <div class="male-part">
+            <div class="males-text">
+                <h1 class="Braclets-h1" data-lang="bbr">Braclets</h1>
+                <h3 class="bracletsfemale" data-lang="brm"> For Males</h3>
+                <h6 class="braclets-info" data-lang="bbrinfom">A well-chosen bracelet can define a man's style, subtly reflecting his personality and strength. It adds a bold yet refined touch to any look, enhancing confidence and leaving a lasting impression. With the right piece, elegance and individuality effortlessly come together.</h6>
+                <a href="https://www.shopier.com/ShowProductNew/storefront.php?shop=excellences&sid=Mlc0eHh4dlVMSkVScDFqVzBfLTFfQmlsZWtsaWtfIA==#Bileklik"><button class="bracletsm-btt" data-lang="brbtt">Show all braclets</button></a>
+
+            </div>
+            <div class="m-img">
+                <img src="../../static/users/b-contents/IMG_1839.JPG" alt="" class="b-img">
+
+            </div>
+        </div>
+
+
+
+        <div class="third-part">
+            <footer class="last-footer">
+                <div class="bx1">
+                    <h2 class="h2-1" data-lang="company">Company</h2>
+                    <a href="{% url 'index' %}" ><h5 class="h5">Excellences Store</h5></a>
+                    <h5 class="h5">Address: Ankara, Turkey</h5>
+    
+                </div>
+                <div class="bx2">
+                    <h2 class="h2" data-lang="contactus">Contact Us At:</h2>
+                    <h5 class="h5-1">Excellencesstore@gmail.com</h5>
+                    <h5 class="h5">+90 501 068 27 00</h5>
+                </div>
+                <div class="bx3">
+                    <h2 class="h2-2" data-lang="follow">Follow us on:</h2>
+                    <div class="media">
+                        <a href="https://www.instagram.com/excellences_store/" target="_blank"><div class="m1"><img src="../../static/users/b-contents/instagram copy.png" alt="" class="m-insta"></div></a>
+                        <a href="#"><div class="m2"><img src="../../static/users/b-contents/youtube copy.png" alt="" class="m-insta"></div></a>
+                        <a href="#"><div class="m3"><img src="../../static/users/b-contents/twitter(1) copy.png" alt="" class="m-insta"></div></a>
+                    </div>
+    
+                    
+                </div>
+                <div class="bx4">
+                    <h2 class="h2-2" data-lang="payment">Payment Methods:</h2>
+                    <div class="box-cards">
+                        <img src="../../static/users/b-contents/card copy.png" alt="" class="master">
+                        <img src="../../static/users/b-contents/money copy.png" alt="" class="master">
+                        <img src="../../static/users/b-contents/apple-pay copy.png" alt="" class="master">
+                        <img src="../../static/users/b-contents/google-pay copy.png" alt="" class="master-2">
+                        <img src="../../static/users/b-contents/visa copy.png" alt="" class="master-2">
+                    </div>
+                </div>
+            
+            </footer>
+
+        </div>
+    </body>
+{% endblock %}

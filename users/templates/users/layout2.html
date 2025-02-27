@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../static/users/contents/content/final-logo.webp" id="logo">
+
+    </head>
+    <body>
+        <div class="navigator">
+            <div class="container">
+                <div class="excellences_box">
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'index' %}" class="excellences_link"><h1 class="text" data-lang="excellences">Excellences</h1></a>
+                {% else %}
+                    <a href="{% url 'logout' %}" class="excellences_link"><h1 class="text" data-lang="excellences">Excellences</h1></a>
+                {% endif %}            
+                </div>
+                {% if user.is_authenticated %}
+                <h4 class="search_text">Welcome {{request.user.username}}</h4>
+                <a href="{% url 'logout' %}" class="search_text">Logout</a>
+            {% else %}
+                <div class="search_bar_container">
+                    <img src="../../static/users/contents/content/user(3).png" alt="" class="search_logo">
+                    <span class="search_text2"><a href="{% url 'login' %}">Login / SignUp</a></span>
+                </div>
+            {% endif %}
+                <div class="languages">
+                    <button class="tr-button">Türkçe</button>
+                    <button class="en-button">English</button>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'earings' %}" data-lang="earrings"><img src="contents/earrings.png" alt="" class="mobile">Earrings</a></li>
+                <li><a href="{% url 'braclets' %}" data-lang="bracelet"><img src="contents/bracelet.png" alt="" class="mobile">Bracelets</a></li>
+                <li><a href="{% url 'necklaces' %}" data-lang="necklace"><img src="contents/necklace.png" alt="" class="mobile">Necklaces</a></li>
+                <li><a href="{% url 'piercings' %}" data-lang="piercing"><img src="contents/septum.png" alt="" class="mobile">Piercings</a></li>
+                <li><a href="{% url 'contact' %}" data-lang="contact"><img src="contents/phone-call.png" alt="" class="mobile">Contact</a></li>
+            </ul>
+            <div class="small-line"></div>
+        </nav>
+    </body>
+    {% block body %}
+    {% endblock %}

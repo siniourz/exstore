@@ -1,0 +1,56 @@
+<title data-lang="title">Excellences Store | Contact</title>
+<link rel="stylesheet" href="../../static/users/css/contact.css">
+<script src="../../static/users/css/contact.js"></script>
+{% extends "users/layout2.html" %}
+{% block body %}
+        <div class="first-part">
+            <div class="left">
+                <img src="../../static/users/c-contents/IMG_1985.JPG" alt="" class="left-img">
+            </div>
+            <div class="right">
+                <h1 class="reach-h1" data-lang="keep">Keep in Touch via:</h1>
+                <a href="https://www.instagram.com/excellences_store/" target="_blank"><button class="gradient-button">instagram</button></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Excellencesstore@gmail.com" target="_blank" class="gmail-link"><img src="../../static/users/c-contents/gmail.png" alt="" class="gmail-img"><button class="gmail">Gmail</button></a>
+                <a href="#"><button class="gradient-button-whatsapp">whats app</button></a>
+
+            </div>
+        </div>
+        <div class="third-part">
+            <footer class="last-footer">
+                <div class="bx1">
+                    <h2 class="h2-1" data-lang="company">Company</h2>
+                    <a href="{% url 'index' %}" ><h5 class="h5">Excellences Store</h5></a>
+                    <h5 class="h5">Address: Ankara, Turkey</h5>
+    
+                </div>
+                <div class="bx2">
+                    <h2 class="h2" data-lang="contactus">Contact Us At:</h2>
+                    <h5 class="h5-1">Excellencesstore@gmail.com</h5>
+                    <h5 class="h5">+90 501 068 27 00</h5>
+                </div>
+                <div class="bx3">
+                    <h2 class="h2-2" data-lang="follow">Follow us on:</h2>
+                    <div class="media">
+                        <a href="https://www.instagram.com/excellences_store/" target="_blank"><div class="m1"><img src="../../static/users/c-contents/instagram copy.png" alt="" class="m-insta"></div></a>
+                        <a href="#"><div class="m2"><img src="../../static/users/c-contents/youtube copy.png" alt="" class="m-insta"></div></a>
+                        <a href="#"><div class="m3"><img src="../../static/users/c-contents/twitter(1) copy.png" alt="" class="m-insta"></div></a>
+                    </div>
+    
+                    
+                </div>
+                <div class="bx4">
+                    <h2 class="h2-2" data-lang="payment">Payment Methods:</h2>
+                    <div class="box-cards">
+                        <img src="../../static/users/c-contents/card copy.png" alt="" class="master">
+                        <img src="../../static/users/c-contents/money copy.png" alt="" class="master">
+                        <img src="../../static/users/c-contents/apple-pay copy.png" alt="" class="master">
+                        <img src="../../static/users/c-contents/google-pay copy.png" alt="" class="master-2">
+                        <img src="../../static/users/c-contents/visa copy.png" alt="" class="master-2">
+                    </div>
+                </div>
+            
+            </footer>
+
+        </div>
+    </body>
+{% endblock %}

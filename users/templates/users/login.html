@@ -10,14 +10,15 @@
 
     <form action="{% url 'login' %}" method="post">
         {% csrf_token %}
-        <input type="text" placeholder="username" name="username" class="username">
-        <input type="password" name="password" placeholder="password" class="password">
+        <input type="text"  autofocus placeholder="Username" name="username" class="username">
+        <input type="password" name="password" placeholder="Password" class="password">
         <input type="submit" value="login" class="login">
     </form>
     <p class="p1"><a href="{% url 'signup' %}" class="signup">Create an account now</a></p>
-    <div class="color">
-        <img src="{% static 'users/contents/IMG_1866.JPG' %}" alt="" class="image">
-    </div>
+    <a href="{% url 'logout' %}" class="signup">Back To Home Page</a>
+</div>
+<div class="color">
+    <img src="{% static 'users/contents/photo_2025-02-27 15.59.34.jpeg' %}" alt="" class="image">
 </div>
 
 {% endblock %}

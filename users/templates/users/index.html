@@ -4,18 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Excellences Store</title>
-        <link rel="icon" href="final-logo.webp" id="logo">
+        <link rel="icon" href="../../static/users/contents/content/final-logo.webp" id="logo">
         <link rel="stylesheet" href="../../static/users/css/style.css">
-        <link rel="apple-touch-icon" sizes="180x180" href="final-logo.webp">
-        <link rel="icon" type="image/png" sizes="192x192" href="final-logo.webp">
-        <link rel="icon" type="image/png" sizes="512x512" href="final-logo.webp">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../static/users/contents/content/final-logo.webp">
+        <link rel="icon" type="image/png" sizes="192x192" href="../../static/users/contents/content/final-logo.webp">
+        <link rel="icon" type="image/png" sizes="512x512" href="../../static/users/contents/content/final-logo.webp">
         <script src="../../static/users/css/script.js"></script>
     </head>
     <body>
         <div class="navigator">
             <div class="container">
                 <div class="excellences_box">
-                    <a href="index.html" class="excellences_link"><h1 class="text" data-lang="excellences">Excellences</h1></a>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'index' %}" class="excellences_link"><h1 class="text" data-lang="excellences">Excellences</h1></a>
+                    {% else %}
+                    <a href="{% url 'logout' %}" class="excellences_link"><h1 class="text" data-lang="excellences">Excellences</h1></a>
+                    {% endif %}
                 </div>
                 {% if user.is_authenticated %}
                     <h4 class="search_text">Welcome {{request.user.username}}</h4>
@@ -34,11 +38,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="Earings-p/Earings.html" data-lang="earrings"><img src="../../static/users/contents/content/earrings.png" alt="" class="mobile">Earrings</a></li>
-                <li><a href="braclets-p/braclets.html" data-lang="bracelet"><img src="../../static/users/contents/content/bracelet.png" alt="" class="mobile">Bracelets</a></li>
-                <li><a href="Necklace-P/Necklace.html" data-lang="necklace"><img src="../../static/users/contents/content/necklace.png" alt="" class="mobile">Necklaces</a></li>
-                <li><a href="piercings-p/piercings.html" data-lang="piercing"><img src="../../static/users/contents/content/septum.png" alt="" class="mobile">Piercings</a></li>
-                <li><a href="contact-p/contact.html" data-lang="contact"><img src="../../static/users/contents/content/phone-call.png" alt="" class="mobile">Contact</a></li>
+                <li><a href="{% url 'earings' %}" data-lang="earrings"><img src="../../static/users/contents/content/earrings.png" alt="" class="mobile">Earrings</a></li>
+                <li><a href="{% url 'braclets' %}" data-lang="bracelet"><img src="../../static/users/contents/content/bracelet.png" alt="" class="mobile">Bracelets</a></li>
+                <li><a href="{% url 'necklaces' %}" data-lang="necklace"><img src="../../static/users/contents/content/necklace.png" alt="" class="mobile">Necklaces</a></li>
+                <li><a href="{% url 'piercings' %}" data-lang="piercing"><img src="../../static/users/contents/content/septum.png" alt="" class="mobile">Piercings</a></li>
+                <li><a href="{% url 'contact' %}" data-lang="contact"><img src="../../static/users/contents/content/phone-call.png" alt="" class="mobile">Contact</a></li>
             </ul>
             <div class="small-line"></div>
         </nav>
@@ -57,7 +61,7 @@
             <div class="necklace-text">
                 <h2 class="necklace-h2" data-lang="necklace">Necklace</h2>
                 <h6 class="necklace-info" data-lang="necklaceInfo">Elevate your look by nuance details</h6>
-                <a href="Necklace-P/Necklace.html"><button class="necklace-button" data-lang="exploreNecklaces">Explore Necklaces</button></a>
+                <a href="{% url 'necklaces' %}"><button class="necklace-button" data-lang="exploreNecklaces">Explore Necklaces</button></a>
             </div>
             <div class="necklace-video">
                 <video class="necklaceVideo" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
@@ -91,7 +95,7 @@
                 <h3 class="earings-h3" data-lang="eh3">Elegant Drop Shaped Earrings</h3>
                 <h4 class="earings-h4" data-lang="eh4">The teardrop design earings were crowned the best of 2024, becoming a must-have item with high demand. Their elegant shape and timeless appeal add a unique touch to any style. Elevate your look with this stunning piece and stand out effortlessly.</h4>
                 <a href="https://www.shopier.com/ShowProductNew/products.php?id=30691761&sid=Y2ZON0dkMVk5MjM0T2ZaODFfMF8gXyA="><button class="addtocart" data-lang="addtocart">Add to cart</button></a>
-                <a href="Earings-p/Earings.html"><button class="exploremoreearings" data-lang="moreearings">explore other earings</button></a>
+                <a href="{% url 'earings' %}"><button class="exploremoreearings" data-lang="moreearings">explore other earings</button></a>
             </div>
             <div class="otherearings-box">
                 <img src="../../static/users/contents/content/IMG_1692.JPG" alt="" class="earings-bg2">
@@ -115,7 +119,7 @@
             <div class="braclets-texts">
                 <h1 class="braclets-h1" data-lang="bracelet">Braclets</h1>
                 <h5 class="braclets-h5" data-lang="braclets-h5">Bracelets with unique designs serve as a refined expression of personal style, offering more than just an accessory. These carefully crafted pieces add depth and sophistication to any ensemble, subtly enhancing the wearer’s aesthetic. With their distinctiveness, they create a lasting impression, making a bold yet elegant statement about individuality and taste.</h5>
-                <a href="braclets-p/braclets.html"><button class="braclets-btt" data-lang="br-btt">Explore All Braclets</button></a>
+                <a href="{% url 'braclets' %}"><button class="braclets-btt" data-lang="br-btt">Explore All Braclets</button></a>
             </div>
             <div class="p-color">
                 <img src="../../static/users/contents/content/IMG_1746.jpg" alt="" class="p-img">
@@ -131,7 +135,7 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <a href="piercings-p/piercings.html"><button class="p-btt" data-lang="p-btt">Explore All Piercings</button></a>
+                <a href="{% url 'piercings' %}"><button class="p-btt" data-lang="p-btt">Explore All Piercings</button></a>
             </div>
         </div>
         <div class="circle">
@@ -140,7 +144,7 @@
         <footer class="last-footer">
             <div class="bx1">
                 <h2 class="h2-1" data-lang="company">Company</h2>
-                <a href="index.html" ><h5 class="h5">Excellences Store</h5></a>
+                <a href="{% url 'logout' %}" ><h5 class="h5">Excellences Store</h5></a>
                 <h5 class="h5">Address: Ankara, Turkey</h5>
 
             </div>

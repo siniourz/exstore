@@ -57,5 +57,21 @@ def signup_view(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "users/signup.html",{
-            "message":"create with your credentials"
+            "message":"create your credentials"
         })
+    
+
+def earings(request):
+    return render(request, "users/earings.html")
+
+def braclets(request):
+    return render (request, "users/braclets.html")
+
+def necklaces(request):
+    return render(request, "users/Necklace.html")
+
+def piercings(request):
+    return render(request, "users/piercings.html")
+
+def contact(request):
+    return render(request, "users/contact.html")
