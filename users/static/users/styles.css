@@ -145,7 +145,7 @@ cursor: pointer;
 .loginbody{
     width: 40%;
     height: 100%;
-    background-color: #1a1a1a8e;
+    background-color: #1a1a1acf;
     position: absolute;
     top: 0;
     z-index: 0;
@@ -171,3 +171,45 @@ a{
     margin: 0;
 }
 
+@media only screen and (max-width:768px){
+    .username{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .password{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .login{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .signup{
+        width: 40%;
+        margin-left: 35%;
+        text-align: center;
+    }
+    .email{
+        width: 80%;
+        margin-left: 10%;
+        font-size: 2vh;
+    }
+    .message{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .p2{
+        margin-left: 25%;
+    }
+    .signup2{
+        width: 60%;
+        margin-left: 20%;
+    }
+    .loginbody{
+        width: 100%;
+        
+    }
+    .users{
+        width: 100%;
+    }
+}

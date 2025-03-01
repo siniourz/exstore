@@ -393,3 +393,25 @@ window.addEventListener('scroll', function() {
 
 
 
+/// code for hamburger navbar in the mobile view ///
+document.addEventListener("DOMContentLoaded", function(){
+    const container = document.querySelector('.hmd-container');
+    const hamburger = document.querySelector('.hmbrgr');
+    hamburger.addEventListener('click', function(){
+        if (container.style.display === 'block') {
+            container.style.transition = 'height 0.5s ease, clip-path 0.5s ease';
+            container.style.height = '0px';
+            container.style.clipPath = 'inset(0 0 100% 0)';
+            setTimeout(() => {
+                container.style.display = 'none';
+            }, 500); 
+        } else {
+            container.style.display = 'block';
+            setTimeout(() => {
+                container.style.transition = 'height 0.5s ease, clip-path 0.5s ease';
+                container.style.height = '200px';
+                container.style.clipPath = 'inset(0 0 0 0)';
+            }, 10); 
+        }
+    });
+});

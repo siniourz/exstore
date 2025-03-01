@@ -110,6 +110,37 @@ body{
     opacity: 100%;
 
   }
+  .search_text,.search_text2{
+    max-width: 18vw;
+    max-height: 2vw;
+    background-color: rgba(0, 0, 255, 0.051);
+    position: relative;
+    font-size: 1vw;
+    justify-content: center;
+    left: 2.2vw;
+    bottom: 4vw;
+    font-weight: 600;
+    opacity: 50%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    word-spacing: px;
+    color: #ffffff;
+    border: none;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+  }
+  .search_text2{
+    bottom: 1.3vw;
+    margin-left: 2px;
+  }
+  .search_text2:hover,.search_logo{
+    opacity: 100%;
+
+  }
+  .search_text:hover,.search_logo{
+    opacity: 100%;
+
+  }
   .languages{
     width: 10%;
     height: 45%;
@@ -242,6 +273,13 @@ body{
     word-spacing: 20%;
     margin-left: 5%;
     text-transform: capitalize;
+    color: rgb(255, 149, 0);
+    
+
+}
+.reach-h1 span{
+  font-size: 3vw;
+  color: #1a1a1a;
 
 }
 

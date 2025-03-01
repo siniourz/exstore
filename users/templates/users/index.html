@@ -30,6 +30,17 @@
                         <span class="search_text2"><a href="{% url 'login' %}">Login / SignUp</a></span>
                     </div>
                 {% endif %}
+                <div class="hmbrgr"></div>
+                <div class="hmbrgr"></div>
+                <div class="hmbrgr"></div>
+                <div class="hmd-container">
+                    <ul>
+                        <li><button class="tr-button">Türkçe</button></li>
+                        <li><button class="en-button">English</button></li>
+                        <li><a href="{% url 'login' %}" class="link1">Login / SignUp</a></li>
+
+                    </ul>
+                </div>
                 <div class="languages">
                     <button class="tr-button">Türkçe</button>
                     <button class="en-button">English</button>
@@ -61,7 +72,7 @@
             <div class="necklace-text">
                 <h2 class="necklace-h2" data-lang="necklace">Necklace</h2>
                 <h6 class="necklace-info" data-lang="necklaceInfo">Elevate your look by nuance details</h6>
-                <a href="{% url 'necklaces' %}"><button class="necklace-button" data-lang="exploreNecklaces">Explore Necklaces</button></a>
+                <a href="{% url 'necklaces' %}"><button class="necklace-button" data-lang="exploreNecklaces">Visit Necklaces Page</button></a>
             </div>
             <div class="necklace-video">
                 <video class="necklaceVideo" autoplay loop muted playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
@@ -94,20 +105,20 @@
                 <h6 class="earings-h6" data-lang="eh6">the most popular earring in 2024</h6>
                 <h3 class="earings-h3" data-lang="eh3">Elegant Drop Shaped Earrings</h3>
                 <h4 class="earings-h4" data-lang="eh4">The teardrop design earings were crowned the best of 2024, becoming a must-have item with high demand. Their elegant shape and timeless appeal add a unique touch to any style. Elevate your look with this stunning piece and stand out effortlessly.</h4>
-                <a href="https://www.shopier.com/ShowProductNew/products.php?id=30691761&sid=Y2ZON0dkMVk5MjM0T2ZaODFfMF8gXyA="><button class="addtocart" data-lang="addtocart">Add to cart</button></a>
+                <a href="https://pin.it/3tnFzxDPi" target="_blank"><button class="addtocart" data-lang="addtocart">Go to Video</button></a>
                 <a href="{% url 'earings' %}"><button class="exploremoreearings" data-lang="moreearings">explore other earings</button></a>
             </div>
             <div class="otherearings-box">
                 <img src="../../static/users/contents/content/IMG_1692.JPG" alt="" class="earings-bg2">
                 <div class="earings-black-cover">
-                    <h1 class="otherh1" data-lang="otherh1">other popular earrings</h1>
+                    <h1 class="otherh1" data-lang="otherh1">other popular earrings in the world</h1>
                     <div class="earings1-box">
                         <img src="../../static/users/contents/content/photo_2025-01-22 16.00.39.jpeg" alt="" class="e1-img">
-                        <a href="https://www.shopier.com/ShowProductNew/products.php?id=32888752&sid=RGQzRm9jZUpkRFRaVGxyTzFfM18gXyA=" target="_blank"><button class="e1-button" data-lang="e12bt">View Details</button></a>
+                        <a href="https://pin.it/3VhvJJ0RD" target="_blank"><button class="e1-button" data-lang="e12bt">Show Video</button></a>
                     </div>
                     <div class="earing2-box">
                         <img src="../../static/users/contents/content/photo_2025-01-22 16.00.40.jpeg" alt="" class="e2-img">
-                        <a href="https://www.shopier.com/ShowProductNew/products.php?id=32888819" target="_blank"><button class="e1-button" data-lang="e12bt">View Details</button></a>
+                        <a href="https://pin.it/1lNGdhDaG" target="_blank"><button class="e1-button" data-lang="e12bt">Show Video</button></a>
                     </div>
                 </div>
             </div>
@@ -119,7 +130,7 @@
             <div class="braclets-texts">
                 <h1 class="braclets-h1" data-lang="bracelet">Braclets</h1>
                 <h5 class="braclets-h5" data-lang="braclets-h5">Bracelets with unique designs serve as a refined expression of personal style, offering more than just an accessory. These carefully crafted pieces add depth and sophistication to any ensemble, subtly enhancing the wearer’s aesthetic. With their distinctiveness, they create a lasting impression, making a bold yet elegant statement about individuality and taste.</h5>
-                <a href="{% url 'braclets' %}"><button class="braclets-btt" data-lang="br-btt">Explore All Braclets</button></a>
+                <a href="{% url 'braclets' %}"><button class="braclets-btt" data-lang="br-btt">Visit Braclets Page</button></a>
             </div>
             <div class="p-color">
                 <img src="../../static/users/contents/content/IMG_1746.jpg" alt="" class="p-img">
@@ -135,11 +146,11 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <a href="{% url 'piercings' %}"><button class="p-btt" data-lang="p-btt">Explore All Piercings</button></a>
+                <a href="{% url 'piercings' %}"><button class="p-btt" data-lang="p-btt">Visit Piercings Page</button></a>
             </div>
         </div>
         <div class="circle">
-            <a href="https://www.instagram.com/excellences_store/" target="_blank"><img src="content/social.png" alt="" class="circle-insta"></a>
+            <a href="https://www.instagram.com/excellences_store/" target="_blank"><img src="../../static/users/contents/content/social.png" alt="" class="circle-insta"></a>
         </div>
         <footer class="last-footer">
             <div class="bx1">
@@ -172,9 +183,7 @@
                     <img src="../../static/users/contents/content/google-pay.png" alt="" class="master-2">
                     <img src="../../static/users/contents/content/visa.png" alt="" class="master-2">
                 </div>
-            </div>
-            <h4 class="footer-h4">Powered by <a href="shopier.com" class="shopier">Shopier</a></h4>
-        
+            </div>   
         </footer>
        
 
