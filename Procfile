@@ -1,1 +1,1 @@
-web: gunicorn users.wsgi:application
+web: gunicorn exstore.wsgi:application
