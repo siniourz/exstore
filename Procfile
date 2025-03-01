@@ -1,0 +1,1 @@
+web: gunicorn exstore.wsgi:application
