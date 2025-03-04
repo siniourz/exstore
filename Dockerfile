@@ -17,11 +17,11 @@ ENV PATH="/opt/venv/bin:$PATH"
 # Install dependencies
 RUN pip install --upgrade pip && pip install -r requirements.txt --no-cache-dir
 
-# Collect static files (optional, needed for production)
-RUN python manage.py collectstatic --noinput
+# Collect static files (if using Django)
+RUN python manage.py collectstatic --noinput || true
 
 # Expose the application port
 EXPOSE 8000
 
-# Run Django application
+# Run Django application with Gunicorn
 CMD ["gunicorn", "--bind", "0.0.0.0:8000", "exstore.wsgi:application"]
