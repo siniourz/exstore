@@ -55,8 +55,8 @@ ROOT_URLCONF = 'exstore.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # Leave this empty if you rely on app directories
-        'APP_DIRS': True,  # This enables Django to search inside app templates
+        'DIRS': [os.path.join(BASE_DIR, 'users', 'templates')],  # Ensure this is correct
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -118,12 +118,10 @@ USE_TZ = True
 import os
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles')]  # Should contain source static files
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Required for Render deployment
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
