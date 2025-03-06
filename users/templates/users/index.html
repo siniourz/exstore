@@ -24,6 +24,7 @@
                 {% if user.is_authenticated %}
                     <h4 class="search_text">Welcome {{request.user.username}}</h4>
                     <a href="{% url 'logout' %}" class="search_text">Logout</a>
+                    
                 {% else %}
                     <div class="search_bar_container">
                         <img src="../../static/users/contents/content/user(3).png" alt="" class="search_logo">
@@ -35,9 +36,16 @@
                 <div class="hmbrgr"></div>
                 <div class="hmd-container">
                     <ul>
+                        {% if user.is_authenticated %}
+                            <li><h4 class="stmobile">Welcome {{ request.user.username }}</h4></li>
+                        {% endif %}
                         <li><button class="tr-button">Türkçe</button></li>
                         <li><button class="en-button">English</button></li>
-                        <li><a href="{% url 'login' %}" class="link1">Login / SignUp</a></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout' %}" class="link1">Logout</a></li>
+                        {% else %}
+                             <li><a href="{% url 'login' %}" class="link1">Login / SignUp</a></li>
+                        {% endif %}
 
                     </ul>
                 </div>

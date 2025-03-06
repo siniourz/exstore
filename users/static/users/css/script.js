@@ -122,14 +122,7 @@ window.addEventListener('scroll', () => {
  
   }
 });
-//alert message
-document.addEventListener("DOMContentLoaded", function(){
-    document.querySelector('').addEventListener('click', function(){
-        alert("We are still working on this feature. Please check back later.");
-    })
-});
 
-//till here
 document.addEventListener("DOMContentLoaded", function() {
     document.querySelector('.tr-button').addEventListener('click', function() {
         setLanguage('tr');
