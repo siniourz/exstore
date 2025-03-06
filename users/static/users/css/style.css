@@ -1030,14 +1030,13 @@ a{
   }
   .hmd-container{
     display: inline;
-    width: 110%;
+    width: 120%;
     height: 0px;
     margin: 0;
     padding: 0;
     z-index: 12;
     background-color: #1a1a1a;
     right: 0%;
-    right: 00px;
     position: absolute;
     top: 0%;
     padding-top: 140px;
@@ -1067,6 +1066,7 @@ a{
     align-items: center;
     margin: 0;
     padding: 0;
+    padding-left: 30px;
   }
   .link1{
     font-size: 2vh;
