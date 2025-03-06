@@ -5,4 +5,3 @@ packaging==24.2
 setuptools==75.8.2
 sqlparse==0.5.3
 wheel==0.45.1
-python-3.10
