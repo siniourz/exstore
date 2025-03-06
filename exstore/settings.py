@@ -27,8 +27,7 @@ DEBUG = True
 
 
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(',')
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
