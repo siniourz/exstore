@@ -62,7 +62,7 @@ def signup_view(request):
     
 
 def earings(request):
-    return render(request, "users/earings.html")
+    return render(request, "users/Earings.html")
 
 def braclets(request):
     return render (request, "users/braclets.html")
