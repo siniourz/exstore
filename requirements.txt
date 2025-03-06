@@ -2,6 +2,5 @@ asgiref==3.8.1
 Django==5.1.6
 gunicorn==20.1.0
 packaging==24.2
-setuptools==75.8.2
 sqlparse==0.5.3
-wheel==0.45.1
+typing_extensions==4.12.2
