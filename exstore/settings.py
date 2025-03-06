@@ -25,11 +25,9 @@ SECRET_KEY = 'django-insecure-7ey5^cl)i-8r!m#=5_z@0-)hw5-q0p63wxx7(b6d_c4+48vqp5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'exstore.onrender.com',  # Add your Render domain
-    '127.0.0.1',  # Allow local development
-    'localhost',
-]
+
+
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1').split(',')
 
 
 # Application definition
